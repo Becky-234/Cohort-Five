@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.whole {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.formContainer {
+  width: 50%;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0c5f52;
+  font-family: "Agency FB";
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Agency FB";
+  font-weight: normal;
+  font-size: 20px;
+  color: #0c5f52;
+}
+
+.required::after {
+  content: " *";
+  color: #ff0000;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0c5f52;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #075b54; /* dark green border */
+  border-radius: 4px;
+  font-size: 15px;
+  color: #075b54;
+  background-color: #fff;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.2s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #0b776c;
+  box-shadow: 0 0 3px rgba(7, 91, 84, 0.4);
+}
+
+input[type="date"]::placeholder {
+  color: #999;
+}
+
+/* For WebKit browsers to style the date picker text */
+input[type="date"]::-webkit-datetime-edit {
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* Remove default calendar icon style (optional) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(30%) sepia(20%) saturate(300%) hue-rotate(120deg);
+}
+
+/* Removing default browser styling */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 5px solid #075b54;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* When selected */
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: blue;
+}
+
+select {
+  text-align: center;
+  font-family: "Tahoma";
+}
+
+.gender-group {
+  margin-bottom: 20px;
+}
+
+.gender-options {
+  border: 1px solid #0c5f52;
+  padding: 15px;
+  display: flex;
+  gap: 275px;
+  margin-top: 5px;
+}
+
+.gender-option {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.gender-option input {
+  margin-right: 5px;
+}
+
+.gender-option label {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+button {
+  background-color: #0c5f52;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  font-family: "Agency FB";
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 370px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .whole {
+    flex-direction: column;
+  }
+
+  .image,
+  .formContainer {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+input.invalid,
+select.invalid {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+.gender-group.invalid {
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(231, 76, 60, 0.05);
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.success-banner {
+  background-color: #00B050;
+  border: 1px solid #c3e6cb;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  display: none;
+}

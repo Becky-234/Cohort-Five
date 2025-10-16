@@ -1,0 +1,33 @@
+{
+  "name": "cohort-five",
+  "version": "1.0.0",
+  "description": "Practicing more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Becky-234/Cohort-Five.git"
+  },
+  "keywords": [
+    "Practice"
+  ],
+  "author": "Kirabo Becky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Becky-234/Cohort-Five/issues"
+  },
+  "homepage": "https://github.com/Becky-234/Cohort-Five#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.1",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

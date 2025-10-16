@@ -1,0 +1,66 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Student Application Form
+link(rel="stylesheet", href="/css/form.css")
+.whole
+  .image
+    img(src="/images/image.png")
+  .formContainer
+    h1 STUDENT APPLICATION FORM
+    .success-banner#successBanner Form has been Submitted successfully!
+    form(action='/', method="post" novalidate)
+      .row
+        .col
+          label.required(for="fname") First Name
+          input#fname(type="text", name="fname")
+        .col
+          label.required(for="lname") Last Name
+          input#lname(type="text", name="lname")
+      .row
+        .col
+          label.required(for="course") Courses
+          select#course(name="course")
+            option(value="", disabled, selected) -- Select --
+            option(value="computer-science") Computer Science
+            option(value="business") Business Administration
+            option(value="engineering") Engineering
+        .col
+          label.required(for="entry") Entry Scheme
+          select#entry(name="entry")
+            option(value="", disabled, selected) -- Select --
+            option(value="direct") Direct Entry
+            option(value="transfer") Transfer
+            option(value="international") International Student
+      .row
+        .col
+          label.required(for="intake") Intake
+          select#intake(name="intake")
+            option(value="", disabled, selected) -- Select --
+            option(value="january") January 2025
+            option(value="may") May 2025
+            option(value="september") September 2025
+        .col
+          label.required(for="sponsorship") Sponsorship
+          select#sponsorship(name="sponsorship")
+            option(value="", disabled, selected) -- Select --
+            option(value="self") Self-Sponsored
+            option(value="government") Government
+            option(value="organization") Organization
+      .gender-group
+        label.required Gender
+        .gender-options
+          .gender-option
+            input#male(type="radio", name="gender", value="male")
+            label(for="male") Male
+          .gender-option
+            input#female(type="radio", name="gender", value="female")
+            label(for="female") Female
+      .row
+        .col
+          label.required(for="dob") Date of Birth
+          input#dob(type="date", name="dob")
+        .col
+          label.required(for="residence") Residence
+          input#residence(type="text", name="residence")
+      button#submit(type="submit") SUBMIT
+script(src="../javascript/form.js")

@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice 1</title>
+    <title>Student Application Form</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
+
 <body>
-    <h1>KIRABO REBECCA</h1>
+
+    <div class="whole">
+        <div class="image">
+            <img src="images/image.png">
+        </div>
+
+        <div class="formContainer">
+            <h1>STUDENT APPLICATION FORM</h1>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col">
+                        <label for="fname" class="required">First Name</label>
+                        <input type="text" id="fname" required>
+                    </div>
+                    <div class="col">
+                        <label for="lname" class="required">Last Name</label>
+                        <input type="text" id="lname" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="course" class="required">Courses</label>
+                        <select id="course" name="course" required>
+                            <option value="" disabled selected>-- Select --</option>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="business">Business Administration</option>
+                            <option value="engineering">Engineering</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="entry" class="required">Entry Scheme</label>
+                        <select id="entry" name="entry" required>
+                            <option value="" disabled selected>-- Select --</option>
+                            <option value="direct">Direct Entry</option>
+                            <option value="transfer">Transfer</option>
+                            <option value="international">International Student</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="intake" class="required">Intake</label>
+                        <select id="intake" name="intake" required>
+                            <option value="" disabled selected>-- Select --</option>
+                            <option value="january">January 2025</option>
+                            <option value="may">May 2025</option>
+                            <option value="september">September 2025</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="sponsorship" class="required">Sponsorship</label>
+                        <select id="sponsorship" name="sponsorship" required>
+                            <option value="" disabled selected>-- Select --</option>
+                            <option value="self">Self-Sponsored</option>
+                            <option value="government">Government</option>
+                            <option value="organization">Organization</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gender-group">
+                    <label class="required">Gender</label>
+                    <div class="gender-options">
+                        <div class="gender-option">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="gender-option">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="dob" class="required">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="col">
+                        <label for="residence" class="required">Residence</label>
+                        <input type="text" id="residence" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
